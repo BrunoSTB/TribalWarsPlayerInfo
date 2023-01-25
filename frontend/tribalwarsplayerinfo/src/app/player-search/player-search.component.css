@@ -1,0 +1,93 @@
+
+html, body {
+    min-height: 100%;
+}
+body, div, form, input, select, label { 
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    color: #666;
+    line-height: 22px;
+}
+.main-div {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  justify-content: center;
+}
+.player-search {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 20px;
+    flex-direction: column;
+    max-width: max-content;
+}
+form, .player-search-result {
+    width: 100%;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 8px  #cc7a00; 
+    margin-bottom: 30px;
+}
+input{
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: calc(100% - 10px);
+    padding: 5px;
+}
+.item:hover i, input:hover::placeholder {
+    color: #cc7a00;
+}
+.item input:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 3px 0 #cc7a00;
+    color: #cc7a00;
+}
+.item p {
+    height: 1.5rem;
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin-top: 3px;
+} 
+.item p:hover {
+    box-shadow: 0 0 3px 0 #cc7a00;
+    border: 1px solid transparent;
+    color: #cc7a00;
+}
+button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; 
+    background: #cc7a00;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover {
+    background: #ff9800;
+}
+@media (min-width: 568px) {
+    .name-item, .city-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .name-item input, .name-item div {
+        width: calc(50% - 20px);
+    }
+    .name-item div input {
+        width:97%;
+    }
+    .name-item div label {
+        display:block;
+        padding-bottom:5px;
+    }
+}
