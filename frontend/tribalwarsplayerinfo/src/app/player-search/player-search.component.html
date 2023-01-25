@@ -1,0 +1,46 @@
+<div class="main-div">
+    <div class="player-search">
+        <form [formGroup]="playerSearchForm" (ngSubmit)="onSubmit()">
+            <h3>Search for a player's world information</h3>
+            <div class="item">
+                <label for="playerName"><i class="fas fa-envelope">Player's Name</i></label>
+                <input id="playerName" name="playerName" type="text" formControlName="playerName">
+            </div>
+            
+            <div class="item">
+                <label for="world"><i class="fas fa-envelope">Player's World</i></label>
+                <input id="world" type="number" formControlValue min="1" max="117"  formControlName="world">
+            </div>
+
+            <button class="button" type="submit">Get Player Info</button>
+        </form>
+
+        <div class="player-search-result">
+            <h3>Result</h3>
+            <div class="item">
+                <i class="fas fa-envelope">Player's Name</i>
+                <p>{{this.player.Name || ""}}</p>
+            </div>
+            <div class="item">
+                <i class="fas fa-envelope">Player's Tribe</i>
+                <p>{{this.player.Tribe || ""}}</p>
+            </div>
+            <div class="item">
+                <i class="fas fa-envelope">Player's Classification</i>
+                <p>{{this.player.Classification || ""}}</p>
+            </div>
+            <div class="item">
+                <i class="fas fa-envelope">Player's Points</i>
+                <p>{{this.player.Points || ""}}</p>
+            </div>
+            <div class="item">
+                <i class="fas fa-envelope">Player's Villages</i>
+                <p>{{this.player.Villages || ""}}</p>
+            </div>
+            <div class="item">
+                <i class="fas fa-envelope">Points Per Village</i>
+                <p>{{this.player.PointsPerVillage || ""}}</p>
+            </div>
+        </div>
+    </div>
+</div>
